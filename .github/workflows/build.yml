@@ -21,7 +21,11 @@ jobs:
           # Vérifie d'abord le README du dépôt pour la source officielle.
           echo "TODO: télécharger et extraire le toolchain"
           # exemple : curl -L -o toolchain.zip "URL" && unzip toolchain.zip -d $HOME/jieli
-
+      - name: Installer les dépendances Python
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install Pillow
+          
       - name: Lancer build.sh
         run: |
           chmod +x build.sh
