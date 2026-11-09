@@ -25,8 +25,7 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           python3 -m pip install Pillow
-
-       - name: Télécharger le toolchain JieLi
+      - name: Télécharger le toolchain JieLi
         run: |
           chmod +x tools/get_toolchain.sh
           ./tools/get_toolchain.sh
