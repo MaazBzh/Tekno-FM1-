@@ -15,16 +15,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y build-essential python3
 
-      - name: Installer le toolchain JieLi
-        run: |
-          # À adapter : URL ou archive du toolchain pi32v2 / SDK AC791N
-          # Vérifie d'abord le README du dépôt pour la source officielle.
-          echo "TODO: télécharger et extraire le toolchain"
-          # exemple : curl -L -o toolchain.zip "URL" && unzip toolchain.zip -d $HOME/jieli
       - name: Installer les dépendances Python
         run: |
           python3 -m pip install --upgrade pip
           python3 -m pip install Pillow
+      
       - name: Télécharger le toolchain JieLi
         run: |
           chmod +x tools/get_toolchain.sh
